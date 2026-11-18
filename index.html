@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENS.LAB | 배그 감도 추천</title>
+    <title>PG.GG | 배그 감도 추천</title>
     <style>
          :root {
             --bg: #0b0d12;
@@ -13,31 +14,30 @@
             --line: rgba(255, 255, 255, .09);
             --a1: #ffb703;
             --a2: #fb5607;
-            --grad: linear-gradient(135deg, var(--a1), var(--a2));
+            --grad: linear-gradient(135deg, var(--a1), var(--a2))
         }
         
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box
         }
         
         html {
-            scroll-behavior: auto;
+            scroll-behavior: auto
         }
-        /* 부드러운 이동은 아래 JS(easing)가 담당 */
         
         body {
             background: var(--bg);
             color: var(--text);
             font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
             line-height: 1.65;
-            overflow-x: hidden;
+            overflow-x: hidden
         }
         
         a {
             color: inherit;
-            text-decoration: none;
+            text-decoration: none
         }
         /* 배경 장식 */
         
@@ -45,7 +45,7 @@
             position: fixed;
             inset: 0;
             z-index: -1;
-            overflow: hidden;
+            overflow: hidden
         }
         
         .bg::before {
@@ -55,7 +55,7 @@
             background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
             background-size: 56px 56px;
             opacity: .35;
-            mask-image: radial-gradient(ellipse at 50% 20%, #000 20%, transparent 75%);
+            mask-image: radial-gradient(ellipse at 50% 20%, #000 20%, transparent 75%)
         }
         
         .blob {
@@ -65,13 +65,13 @@
             border-radius: 50%;
             filter: blur(110px);
             opacity: .35;
-            animation: float 14s ease-in-out infinite;
+            animation: float 14s ease-in-out infinite
         }
         
         .b1 {
             background: var(--a2);
             top: -160px;
-            left: -120px;
+            left: -120px
         }
         
         .b2 {
@@ -79,12 +79,12 @@
             top: 30%;
             right: -180px;
             animation-delay: -6s;
-            opacity: .22;
+            opacity: .22
         }
         
         @keyframes float {
             50% {
-                transform: translate(60px, 50px) scale(1.12);
+                transform: translate(60px, 50px) scale(1.12)
             }
         }
         /* 상단 메뉴 */
@@ -101,13 +101,13 @@
             padding: 16px 6vw;
             backdrop-filter: blur(14px);
             background: rgba(11, 13, 18, .6);
-            border-bottom: 1px solid var(--line);
+            border-bottom: 1px solid var(--line)
         }
         
         .logo {
             font-weight: 900;
             font-size: 21px;
-            letter-spacing: 1px;
+            letter-spacing: 1px
         }
         
         .logo span,
@@ -115,23 +115,20 @@
             background: var(--grad);
             -webkit-background-clip: text;
             background-clip: text;
-            color: transparent;
+            color: transparent
         }
         
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 30px
         }
         
         nav ul a {
             font-size: 15px;
             color: var(--sub);
             transition: .2s;
-        }
-        
-        nav ul a {
-            position: relative;
+            position: relative
         }
         
         nav ul a::after {
@@ -144,20 +141,17 @@
             background: var(--grad);
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform .35s ease;
+            transition: transform .35s ease
         }
         
-        nav ul a:hover {
-            color: #fff;
-        }
-        
+        nav ul a:hover,
         nav ul a.active {
-            color: #fff;
+            color: #fff
         }
         
         nav ul a.active::after,
         nav ul a:hover::after {
-            transform: scaleX(1);
+            transform: scaleX(1)
         }
         /* 히어로 */
         
@@ -168,7 +162,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 120px 6vw 60px;
+            padding: 120px 6vw 60px
         }
         
         .badge {
@@ -180,28 +174,28 @@
             font-size: 13px;
             color: var(--a1);
             letter-spacing: 2px;
-            margin-bottom: 26px;
+            margin-bottom: 26px
         }
         
         .hero h1 {
             font-size: clamp(38px, 7vw, 78px);
             line-height: 1.15;
             font-weight: 900;
-            letter-spacing: -1px;
+            letter-spacing: -1px
         }
         
         .hero p {
             max-width: 560px;
             color: var(--sub);
             font-size: clamp(15px, 2vw, 18px);
-            margin: 22px auto 36px;
+            margin: 22px auto 36px
         }
         
         .btns {
             display: flex;
             gap: 14px;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: center
         }
         
         .btn {
@@ -213,28 +207,28 @@
             cursor: pointer;
             font-family: inherit;
             transition: .25s;
-            display: inline-block;
+            display: inline-block
         }
         
         .btn.pri {
             background: var(--grad);
             color: #111;
-            box-shadow: 0 8px 30px rgba(251, 86, 7, .35);
+            box-shadow: 0 8px 30px rgba(251, 86, 7, .35)
         }
         
         .btn.pri:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 36px rgba(251, 86, 7, .5);
+            box-shadow: 0 12px 36px rgba(251, 86, 7, .5)
         }
         
         .btn.ghost {
             background: var(--glass);
             color: var(--text);
-            border: 1px solid var(--line);
+            border: 1px solid var(--line)
         }
         
         .btn.ghost:hover {
-            border-color: var(--a1);
+            border-color: var(--a1)
         }
         
         .stats {
@@ -242,57 +236,56 @@
             gap: 40px;
             margin-top: 64px;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: center
         }
         
         .stats div b {
             display: block;
             font-size: 30px;
-            font-weight: 900;
+            font-weight: 900
         }
         
         .stats div span {
             font-size: 13px;
-            color: var(--sub);
+            color: var(--sub)
         }
-        /* 첫 화면 순차 등장 */
         
         .hero>* {
             opacity: 0;
-            animation: rise .9s cubic-bezier(.2, .7, .2, 1) forwards;
+            animation: rise .9s cubic-bezier(.2, .7, .2, 1) forwards
         }
         
         .hero>*:nth-child(2) {
-            animation-delay: .12s;
+            animation-delay: .12s
         }
         
         .hero>*:nth-child(3) {
-            animation-delay: .24s;
+            animation-delay: .24s
         }
         
         .hero>*:nth-child(4) {
-            animation-delay: .36s;
+            animation-delay: .36s
         }
         
         .hero>*:nth-child(5) {
-            animation-delay: .48s;
+            animation-delay: .48s
         }
         
         @keyframes rise {
             from {
                 opacity: 0;
-                transform: translateY(26px);
+                transform: translateY(26px)
             }
             to {
                 opacity: 1;
-                transform: none;
+                transform: none
             }
         }
         
-        @media (prefers-reduced-motion: reduce) {
+        @media (prefers-reduced-motion:reduce) {
             .hero>* {
                 animation: none;
-                opacity: 1;
+                opacity: 1
             }
         }
         /* 공통 섹션 */
@@ -300,19 +293,19 @@
         section.s {
             max-width: 960px;
             margin: 0 auto;
-            padding: 80px 6vw;
+            padding: 80px 6vw
         }
         
         .tag {
             color: var(--a1);
             font-size: 13px;
             letter-spacing: 3px;
-            font-weight: bold;
+            font-weight: bold
         }
         
         .s h2 {
             font-size: clamp(26px, 4vw, 38px);
-            margin: 8px 0 28px;
+            margin: 8px 0 28px
         }
         
         .glass {
@@ -320,9 +313,9 @@
             border: 1px solid var(--line);
             border-radius: 18px;
             padding: 26px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px)
         }
-        /* ===== 이벤트 슬라이드 (10초마다 자동 전환) ===== */
+        /* 이벤트 슬라이드 */
         
         .stage {
             position: relative;
@@ -331,7 +324,7 @@
             overflow: hidden;
             background: var(--glass);
             border: 1px solid var(--line);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px)
         }
         
         .slide {
@@ -345,13 +338,13 @@
             transform: translateX(40px);
             pointer-events: none;
             transition: opacity .6s ease, transform .6s ease;
-            background: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--c) 28%, transparent), transparent 60%);
+            background: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--c) 28%, transparent), transparent 60%)
         }
         
         .slide.active {
             opacity: 1;
             transform: none;
-            pointer-events: auto;
+            pointer-events: auto
         }
         
         .slide .top {
@@ -359,7 +352,7 @@
             gap: 10px;
             align-items: center;
             margin-bottom: 16px;
-            flex-wrap: wrap;
+            flex-wrap: wrap
         }
         
         .pill {
@@ -368,24 +361,24 @@
             font-size: 12px;
             font-weight: bold;
             border: 1px solid var(--c);
-            color: var(--c);
+            color: var(--c)
         }
         
         .pill.solid {
             background: var(--c);
-            color: #111;
+            color: #111
         }
         
         .slide h3 {
             font-size: clamp(24px, 4vw, 34px);
             line-height: 1.3;
-            margin-bottom: 12px;
+            margin-bottom: 12px
         }
         
         .slide p {
             color: #c3cbd8;
             max-width: 640px;
-            font-size: 15px;
+            font-size: 15px
         }
         
         .slide .meta {
@@ -395,21 +388,21 @@
             flex-wrap: wrap;
             align-items: center;
             font-size: 14px;
-            color: var(--sub);
+            color: var(--sub)
         }
         
         .slide .cd {
             color: var(--c);
             font-weight: bold;
             font-size: 17px;
-            font-variant-numeric: tabular-nums;
+            font-variant-numeric: tabular-nums
         }
         
         .slide .btn {
             margin-top: 20px;
             align-self: flex-start;
             padding: 11px 26px;
-            font-size: 15px;
+            font-size: 15px
         }
         
         .ctrl {
@@ -419,7 +412,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            z-index: 3;
+            z-index: 3
         }
         
         .ctrl button {
@@ -431,19 +424,19 @@
             color: #fff;
             cursor: pointer;
             font-size: 14px;
-            transition: .2s;
+            transition: .2s
         }
         
         .ctrl button:hover {
             border-color: var(--a1);
-            color: var(--a1);
+            color: var(--a1)
         }
         
         .count {
             font-size: 13px;
             color: var(--sub);
             min-width: 40px;
-            text-align: center;
+            text-align: center
         }
         
         .dots {
@@ -452,7 +445,7 @@
             bottom: 22px;
             display: flex;
             gap: 8px;
-            z-index: 3;
+            z-index: 3
         }
         
         .dots i {
@@ -461,13 +454,13 @@
             border-radius: 50%;
             background: rgba(255, 255, 255, .2);
             cursor: pointer;
-            transition: .3s;
+            transition: .3s
         }
         
         .dots i.on {
             width: 26px;
             border-radius: 6px;
-            background: var(--a1);
+            background: var(--a1)
         }
         
         .bar {
@@ -477,7 +470,7 @@
             height: 4px;
             width: 0;
             background: var(--grad);
-            z-index: 3;
+            z-index: 3
         }
         
         .paused {
@@ -488,11 +481,11 @@
             color: var(--sub);
             opacity: 0;
             transition: .2s;
-            z-index: 3;
+            z-index: 3
         }
         
         .stage:hover .paused {
-            opacity: 1;
+            opacity: 1
         }
         /* 이벤트 목록 */
         
@@ -500,12 +493,12 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            margin-top: 18px;
+            margin-top: 18px
         }
         
         .lists h4 {
             font-size: 15px;
-            margin-bottom: 10px;
+            margin-bottom: 10px
         }
         
         .ev {
@@ -515,17 +508,17 @@
             align-items: center;
             padding: 10px 0;
             border-bottom: 1px solid var(--line);
-            font-size: 14px;
+            font-size: 14px
         }
         
         .ev:last-child {
-            border-bottom: none;
+            border-bottom: none
         }
         
         .ev .nm {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 8px
         }
         
         .ev .nm::before {
@@ -534,39 +527,62 @@
             height: 8px;
             border-radius: 50%;
             background: var(--c);
-            flex: none;
+            flex: none
+        }
+        
+        .ev a {
+            transition: .2s
+        }
+        
+        .ev a:hover {
+            color: var(--a1)
+        }
+        
+        .go {
+            padding: 4px 13px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid var(--c);
+            color: var(--c);
+            transition: .2s
+        }
+        
+        .go:hover {
+            background: var(--c);
+            color: #111
         }
         
         .ev .cd {
             color: var(--sub);
             font-size: 13px;
             font-variant-numeric: tabular-nums;
-            white-space: nowrap;
+            white-space: nowrap
         }
         
         .none {
             color: var(--sub);
             font-size: 14px;
-            padding: 10px 0;
+            padding: 10px 0
         }
         /* 입력 */
         
         .row {
             display: flex;
             gap: 16px;
-            flex-wrap: wrap;
+            flex-wrap: wrap
         }
         
         .field {
             flex: 1;
-            min-width: 170px;
+            min-width: 170px
         }
         
         label {
             display: block;
             font-size: 13px;
             color: var(--sub);
-            margin-bottom: 6px;
+            margin-bottom: 6px
         }
         
         input,
@@ -579,25 +595,26 @@
             border-radius: 10px;
             font-size: 15px;
             font-family: inherit;
-            transition: .2s;
+            transition: .2s
         }
         
         input:focus,
         select:focus {
             outline: none;
             border-color: var(--a1);
-            box-shadow: 0 0 0 3px rgba(255, 183, 3, .18);
+            box-shadow: 0 0 0 3px rgba(255, 183, 3, .18)
         }
         
-        select option {
-            background: #14171f;
+        select option,
+        select optgroup {
+            background: #14171f
         }
         
         .chips {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
-            margin-top: 18px;
+            margin-top: 18px
         }
         
         .chip {
@@ -606,11 +623,11 @@
             background: rgba(0, 0, 0, .3);
             border: 1px solid var(--line);
             font-size: 14px;
-            color: var(--sub);
+            color: var(--sub)
         }
         
         .chip b {
-            color: var(--a1);
+            color: var(--a1)
         }
         /* 결과 카드 */
         
@@ -618,7 +635,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 14px;
-            margin-top: 22px;
+            margin-top: 22px
         }
         
         .rc {
@@ -627,19 +644,19 @@
             border-radius: 14px;
             background: var(--glass);
             border: 1px solid var(--line);
-            transition: .3s;
+            transition: .3s
         }
         
         .rc:hover {
             transform: translateY(-6px);
             border-color: var(--a1);
-            box-shadow: 0 14px 34px rgba(255, 183, 3, .14);
+            box-shadow: 0 14px 34px rgba(255, 183, 3, .14)
         }
         
         .rc small {
             display: block;
             font-size: 13px;
-            color: var(--sub);
+            color: var(--sub)
         }
         
         .rc strong {
@@ -651,7 +668,7 @@
             background: var(--grad);
             -webkit-background-clip: text;
             background-clip: text;
-            color: transparent;
+            color: transparent
         }
         
         .rc em {
@@ -659,11 +676,11 @@
             font-size: 12px;
             color: var(--sub);
             display: block;
-            min-height: 18px;
+            min-height: 18px
         }
         
         .rc em.chg {
-            color: var(--a1);
+            color: var(--a1)
         }
         
         .rc .rg {
@@ -673,13 +690,13 @@
             box-shadow: none;
             accent-color: var(--a1);
             margin: 12px 0 6px;
-            cursor: pointer;
+            cursor: pointer
         }
         
         .pm {
             display: flex;
             gap: 8px;
-            justify-content: center;
+            justify-content: center
         }
         
         .pm button {
@@ -692,34 +709,151 @@
             font-size: 18px;
             line-height: 1;
             cursor: pointer;
-            transition: .2s;
+            transition: .2s
         }
         
         .pm button:hover {
             border-color: var(--a1);
-            color: var(--a1);
+            color: var(--a1)
         }
         
         .pm button:active {
-            transform: scale(.92);
+            transform: scale(.92)
         }
         
         .note {
             color: var(--sub);
             font-size: 13px;
-            margin-top: 16px;
+            margin-top: 16px
+        }
+        /* 총기별 배율 강조 */
+        
+        .rc.dim {
+            opacity: .28;
+            filter: grayscale(.8)
+        }
+        
+        .rc.best {
+            border-color: var(--a1);
+            box-shadow: 0 0 0 1px var(--a1) inset
+        }
+        
+        .wcat {
+            margin-top: 22px
+        }
+        
+        .wcat h4 {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: var(--a1)
+        }
+        
+        .wlist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+        
+        .wchip {
+            padding: 7px 13px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: rgba(0, 0, 0, .3);
+            color: var(--sub);
+            font-size: 13px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: .2s
+        }
+        
+        .wchip:hover {
+            border-color: var(--a1);
+            color: #fff
+        }
+        
+        .wchip.on {
+            background: var(--grad);
+            color: #111;
+            font-weight: bold;
+            border-color: transparent
+        }
+        
+        .wsum {
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, .3);
+            border: 1px solid var(--line);
+            font-size: 14px;
+            color: #c3cbd8
+        }
+        
+        .wsum b {
+            color: var(--a1)
+        }
+        /* 총기별 감도표 */
+        
+        .wt {
+            margin-top: 22px
+        }
+        
+        .wt table {
+            min-width: 640px
+        }
+        
+        .wt th,
+        .wt td {
+            padding: 9px 6px;
+            font-size: 13px
+        }
+        
+        .wt tr.cat td {
+            text-align: left;
+            color: var(--a1);
+            font-weight: bold;
+            font-size: 14px;
+            padding-top: 18px;
+            border-bottom: 1px solid var(--a1)
+        }
+        
+        .wt tr.w {
+            cursor: pointer;
+            transition: .2s
+        }
+        
+        .wt tr.w:hover {
+            background: rgba(255, 255, 255, .05)
+        }
+        
+        .wt tr.w.on {
+            background: rgba(255, 183, 3, .12)
+        }
+        
+        .wt td.v {
+            font-weight: bold;
+            font-variant-numeric: tabular-nums
+        }
+        
+        .wt td.v.best {
+            color: #111;
+            background: var(--grad);
+            border-radius: 8px
+        }
+        
+        .wt td.x {
+            color: rgba(255, 255, 255, .2)
         }
         /* 보정 테이블 */
         
         .tw {
             overflow-x: auto;
-            margin-top: 18px;
+            margin-top: 18px
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 560px;
+            min-width: 560px
         }
         
         th,
@@ -727,41 +861,41 @@
             padding: 11px 8px;
             text-align: center;
             border-bottom: 1px solid var(--line);
-            font-size: 14px;
+            font-size: 14px
         }
         
         th {
             color: var(--sub);
             font-weight: normal;
-            font-size: 13px;
+            font-size: 13px
         }
         
         td:first-child,
         th:first-child {
-            text-align: left;
+            text-align: left
         }
         
         td input {
             padding: 8px;
             text-align: center;
-            font-size: 14px;
+            font-size: 14px
         }
         
         .res {
             font-size: 20px;
             font-weight: 900;
-            color: var(--a1);
+            color: var(--a1)
         }
         /* 사용법 */
         
         .steps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
+            gap: 16px
         }
         
         .step {
-            padding: 26px;
+            padding: 26px
         }
         
         .step i {
@@ -775,17 +909,17 @@
             font-weight: 900;
             align-items: center;
             justify-content: center;
-            margin-bottom: 14px;
+            margin-bottom: 14px
         }
         
         .step h3 {
             font-size: 18px;
-            margin-bottom: 6px;
+            margin-bottom: 6px
         }
         
         .step p {
             color: var(--sub);
-            font-size: 14px;
+            font-size: 14px
         }
         
         footer {
@@ -793,46 +927,46 @@
             color: var(--sub);
             font-size: 13px;
             padding: 40px 16px 56px;
-            border-top: 1px solid var(--line);
+            border-top: 1px solid var(--line)
         }
         /* 스크롤 등장 효과 */
         
         .reveal {
             opacity: 0;
             transform: translateY(28px);
-            transition: opacity .7s ease, transform .7s ease;
+            transition: opacity .7s ease, transform .7s ease
         }
         
         .reveal.show {
             opacity: 1;
-            transform: none;
+            transform: none
         }
         
         @media (max-width:760px) {
             nav ul {
-                gap: 14px;
+                gap: 14px
             }
             nav ul a {
-                font-size: 13px;
+                font-size: 13px
             }
             .grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr)
             }
             .steps,
             .lists {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr
             }
             .stats {
-                gap: 26px;
+                gap: 26px
             }
             .stage {
-                height: 400px;
+                height: 400px
             }
             .slide {
-                padding: 30px 22px 60px;
+                padding: 30px 22px 60px
             }
             .dots {
-                left: 22px;
+                left: 22px
             }
         }
     </style>
@@ -846,11 +980,12 @@
     </div>
 
     <nav>
-        <a href="#top" class="logo">SENS<span>.LAB</span></a>
+        <a href="#top" class="logo">PG<span>.GG</span></a>
         <ul>
             <li><a href="#events">이벤트</a></li>
             <li><a href="#calc">추천</a></li>
             <li><a href="#fix">보정</a></li>
+            <li><a href="#weapon">총기</a></li>
             <li><a href="#guide">사용법</a></li>
         </ul>
     </nav>
@@ -858,7 +993,7 @@
     <!-- 히어로 -->
     <header class="hero" id="top">
         <span class="badge">PUBG SENSITIVITY</span>
-        <h1>나에게 딱 맞는<br><span class="grad">배그 감도</span>를 찾아라</h1>
+        <h1>배그 감도를<br><span class="grad">쉽게</span> 찾아라</h1>
         <p>DPI와 에임 스타일만 입력하면 배율별 시작 감도를 바로 알려드려요. 이후 직접 측정해서 더 정확하게 맞춰보세요.</p>
         <div class="btns">
             <a href="#calc" class="btn pri">감도 추천받기</a>
@@ -875,7 +1010,6 @@
     <section class="s reveal" id="events">
         <span class="tag">LIVE EVENTS</span>
         <h2>지금 진행 중인 이벤트</h2>
-
         <div class="stage" id="stage">
             <div id="slides"></div>
             <span class="paused">⏸ 마우스를 올리면 일시정지</span>
@@ -887,7 +1021,6 @@
             </div>
             <div class="bar" id="bar"></div>
         </div>
-
         <div class="glass lists" style="margin-top:18px">
             <div>
                 <h4>🔥 진행 중</h4>
@@ -898,7 +1031,7 @@
                 <div id="listSoon"></div>
             </div>
         </div>
-        <p class="note">※ 이벤트 일정은 직접 입력한 데이터(2026.11.18 기준)라 점검·사정에 따라 바뀔 수 있어요. 정확한 내용은 공식 공지를 확인하세요.</p>
+        <p class="note">※ 이벤트 일정은 직접 입력한 데이터(2026.11.18 기준)라 점검·사정에 따라 바뀔 수 있어요. 정확한 내용은 각 이벤트의 공식 페이지(↗)에서 확인하세요.</p>
     </section>
 
     <!-- 추천 -->
@@ -928,7 +1061,7 @@
             </div>
             <div class="grid" id="grid"></div>
             <button type="button" class="btn pri" id="copyBtn" style="margin-top:22px">결과 복사</button>
-            <button type="button" class="btn ghost" id="resetBtn" style="margin-top:22px; margin-left:8px">조정 초기화</button>
+            <button type="button" class="btn ghost" id="resetBtn" style="margin-top:22px;margin-left:8px">조정 초기화</button>
             <p class="note">※ 슬라이더나 − + 버튼으로 배율별 감도를 직접 조정할 수 있어요. 추천값은 시작값(근사치)이라, 배율마다 체감이 달라 직접 측정해 보정하는 게 가장 정확해요.</p>
         </div>
     </section>
@@ -962,6 +1095,24 @@
         </div>
     </section>
 
+    <!-- 총기별 배율 -->
+    <section class="s reveal" id="weapon">
+        <span class="tag">STEP 03</span>
+        <h2>총기별 사용 배율 보기</h2>
+        <div class="glass">
+            <div class="field" style="max-width:260px">
+                <label for="wsel">무기 선택</label>
+                <select id="wsel"></select>
+            </div>
+            <div class="wsum" id="wsum"></div>
+            <div id="wcats"></div>
+            <div class="tw wt">
+                <table id="wtable"></table>
+            </div>
+            <p class="note">※ 배그 감도는 총이 아니라 배율별로 저장돼요. 아래 표는 총마다 쓸 수 있는 배율의 현재 감도(STEP 01에서 조정한 값)를 보여주고, 총을 고르면 STEP 01 카드에서도 강조돼요. 노란색이 그 총의 추천 배율이에요. 장착 가능 배율은 종류별 근사치라 패치로 달라질 수 있어요.</p>
+        </div>
+    </section>
+
     <!-- 사용법 -->
     <section class="s reveal" id="guide">
         <span class="tag">HOW TO</span>
@@ -982,68 +1133,26 @@
         </div>
     </section>
 
-    <footer>© 2026 SENS.LAB · 배그 감도 추천 계산기 (비공식 팬 도구)</footer>
+    <footer>© 2026 PG.GG · 배그 감도 추천 계산기 (비공식 팬 도구)</footer>
 
     <script>
         const $ = id => document.getElementById(id);
 
         /* =========================================================
            1) 이벤트 데이터  ← 새 이벤트는 여기에 한 줄만 추가하세요
-              start / end : 한국시간(+09:00), end가 없으면 endText 사용
+           url : 배그 공식 홈페이지 링크 (슬라이드의 '공식 페이지' 버튼과 목록 제목에 연결)
            ========================================================= */
-        const EVENTS = [{
-            id: 'ive',
-            type: 'collab',
-            title: 'PUBG x IVE 콜라보',
-            desc: '론도에 IVE 스팟 3곳 등장! 멤버 6인 복장을 모두 입으면 \'IVE Stage\' 로비 스킨을 받아요. (PC 11/25까지, 콘솔 12/3까지)',
-            start: '2026-11-04T17:30:00+09:00',
-            end: '2026-11-25T11:00:00+09:00'
-        }, {
-            id: 'ive-web',
-            type: 'collab',
-            title: 'IVE 웹 이벤트 "Let\'s Dive"',
-            desc: '웹 이벤트 참여하고 네임플레이트와 굿즈 증정 이벤트에 도전해 보세요.',
-            start: '2026-11-04T17:30:00+09:00',
-            end: '2026-11-22T23:59:00+09:00'
-        }, {
-            id: 'u441',
-            type: 'update',
-            title: '업데이트 44.1 · 랭크 시즌 44',
-            desc: 'LMG 밸런스 원복, 차량 내구도·타이어 체력 상향, 랭크 시즌 44 시작. 콘솔은 11/12부터 적용돼요.',
-            start: '2026-11-04T17:30:00+09:00',
-            end: null,
-            endText: '시즌 진행 중'
-        }, {
-            id: 'crate',
-            type: 'notice',
-            title: '일부 상자·열쇠 삭제 예고',
-            desc: '12월 업데이트(44.2)에서 일부 상자와 열쇠가 삭제돼요. 그 전까지는 열 수 있고, 삭제 시점에 보유한 경우 보상이 지급돼요.',
-            start: '2026-11-04T17:30:00+09:00',
-            end: null,
-            endText: '12월 업데이트 전까지'
-        }, {
-            id: 'store',
-            type: 'store',
-            title: '11월 상점 업데이트',
-            desc: 'IVE 콜라보 아이템과 새 프로그레시브 무기 스킨이 상점에 올라왔어요.',
-            start: '2026-11-04T17:30:00+09:00',
-            end: '2027-04-07T09:00:00+09:00'
-        }, {
-            id: 'pgcpass',
-            type: 'pass',
-            title: '이벤트 패스 : PGC 2026',
-            desc: '곧 열리는 PGC 2026을 기념한 새 이벤트 패스! PGC 테마 아이템을 모아보세요.',
-            start: '2026-11-25T11:00:00+09:00',
-            end: '2026-12-16T09:00:00+09:00'
-        }, {
-            id: 'home',
-            type: 'offline',
-            title: '펍지 유나이티드: 홈커밍',
-            desc: '서울 성수 PUBG 성수에서 열리는 연말 팬 커뮤니티 페스티벌이에요.',
-            start: '2026-12-18T00:00:00+09:00',
-            end: '2027-01-04T23:59:00+09:00'
-        }];
-
+       /* 스팀 한국어 배틀그라운드 뉴스/공지 (앱 ID 578080, l=koreana = 한국어) */
+const STEAM_NEWS = 'https://store.steampowered.com/news/app/578080?l=koreana';
+const EVENTS = [
+ {id:'ive',url:STEAM_NEWS,type:'collab',title:'PUBG x IVE 콜라보',desc:'론도에 IVE 스팟 3곳 등장! 멤버 6인 복장을 모두 입으면 \'IVE Stage\' 로비 스킨을 받아요. (PC 11/25까지, 콘솔 12/3까지)',start:'2026-11-04T17:30:00+09:00',end:'2026-11-25T11:00:00+09:00'},
+ {id:'ive-web',url:'https://divewithpubg.com',type:'collab',title:'IVE 웹 이벤트 "Let\'s Dive"',desc:'웹 이벤트 참여하고 네임플레이트와 굿즈 증정 이벤트에 도전해 보세요.',start:'2026-11-04T17:30:00+09:00',end:'2026-11-22T23:59:00+09:00'},
+ {id:'u441',url:STEAM_NEWS,type:'update',title:'업데이트 44.1 · 랭크 시즌 44',desc:'LMG 밸런스 원복, 차량 내구도·타이어 체력 상향, 랭크 시즌 44 시작. 콘솔은 11/12부터 적용돼요.',start:'2026-11-04T17:30:00+09:00',end:null,endText:'시즌 진행 중'},
+ {id:'crate',url:STEAM_NEWS,type:'notice',title:'일부 상자·열쇠 삭제 예고',desc:'12월 업데이트(44.2)에서 일부 상자와 열쇠가 삭제돼요. 그 전까지는 열 수 있고, 삭제 시점에 보유한 경우 보상이 지급돼요.',start:'2026-11-04T17:30:00+09:00',end:null,endText:'12월 업데이트 전까지'},
+ {id:'store',url:STEAM_NEWS,type:'store',title:'11월 상점 업데이트',desc:'IVE 콜라보 아이템과 새 프로그레시브 무기 스킨이 상점에 올라왔어요.',start:'2026-11-04T17:30:00+09:00',end:'2027-04-07T09:00:00+09:00'},
+ {id:'pgcpass',url:STEAM_NEWS,type:'pass',title:'이벤트 패스 : PGC 2026',desc:'곧 열리는 PGC 2026을 기념한 새 이벤트 패스! PGC 테마 아이템을 모아보세요.',start:'2026-11-25T11:00:00+09:00',end:'2026-12-16T09:00:00+09:00'},
+ {id:'home',url:STEAM_NEWS,type:'offline',title:'펍지 유나이티드: 홈커밍',desc:'서울 성수 PUBG 성수에서 열리는 연말 팬 커뮤니티 페스티벌이에요.',start:'2026-12-18T00:00:00+09:00',end:'2027-01-04T23:59:00+09:00'}
+];
         const TYPES = {
             collab: {
                 n: '콜라보',
@@ -1085,16 +1194,15 @@
         ];
 
         /* =========================================================
-           2) 알고리즘: 지금 시각 기준으로 상태 분류 + 정렬 + 슬라이드 구성
+           2) 상태 분류 + 정렬 + 슬라이드 구성
            ========================================================= */
-        const status = (e, now) =>
-            now < new Date(e.start) ? 'soon' : (e.end && now > new Date(e.end) ? 'end' : 'on');
+        const status = (e, now) => now < new Date(e.start) ? 'soon' : (e.end && now > new Date(e.end) ? 'end' : 'on');
 
         function classify(now) {
             const on = EVENTS.filter(e => status(e, now) === 'on')
-                .sort((a, b) => (a.end ? +new Date(a.end) : Infinity) - (b.end ? +new Date(b.end) : Infinity)); // 끝나는 순
+                .sort((a, b) => (a.end ? +new Date(a.end) : Infinity) - (b.end ? +new Date(b.end) : Infinity));
             const soon = EVENTS.filter(e => status(e, now) === 'soon')
-                .sort((a, b) => new Date(a.start) - new Date(b.start)); // 시작하는 순
+                .sort((a, b) => new Date(a.start) - new Date(b.start));
             return {
                 on,
                 soon
@@ -1120,14 +1228,12 @@
             return (d > 0 ? d + '일 ' : '') + h + ':' + m + ':' + sec;
         }
 
-        /* 카운트다운 요소 (1초마다 갱신) */
         function cdTag(e, st) {
             if (st === 'on' && !e.end) return `<span class="cd">${e.endText}</span>`;
             const t = st === 'on' ? new Date(e.end).getTime() : new Date(e.start).getTime();
             return `<span class="cd" data-t="${t}" data-pre="${st === 'on' ? '종료까지 ' : '시작까지 '}"></span>`;
         }
 
-        /* 슬라이드 구성: 진행 중(최대 4) → 오늘의 팁 → 예정(최대 2) */
         function buildSlides(now, {
             on,
             soon
@@ -1149,30 +1255,25 @@
                 if (it.tip) {
                     const t = TYPES.tip;
                     return `<div class="slide" style="--c:${t.c}">
-          <div class="top"><span class="pill solid">오늘의 팁</span><span class="pill">${t.n}</span></div>
-          <h3>이것만 기억하세요</h3>
-          <p>${TIPS[dayOfYear(now) % TIPS.length]}</p>
-          <a href="#calc" class="btn pri">내 감도 추천받기</a>
-        </div>`;
+        <div class="top"><span class="pill solid">오늘의 팁</span><span class="pill">${t.n}</span></div>
+        <h3>이것만 기억하세요</h3>
+        <p>${TIPS[dayOfYear(now) % TIPS.length]}</p>
+        <a href="#calc" class="btn pri">내 감도 추천받기</a>
+      </div>`;
                 }
                 const t = TYPES[it.e.type];
                 return `<div class="slide" style="--c:${t.c}">
-        <div class="top">
-          <span class="pill solid">${it.st === 'on' ? '진행 중' : '예정'}</span>
-          <span class="pill">${t.n}</span>
-        </div>
-        <h3>${it.e.title}</h3>
-        <p>${it.e.desc}</p>
-        <div class="meta"><span>📅 ${period(it.e)}</span>${cdTag(it.e, it.st)}</div>
-      </div>`;
+      <div class="top"><span class="pill solid">${it.st === 'on' ? '진행 중' : '예정'}</span><span class="pill">${t.n}</span></div>
+      <h3>${it.e.title}</h3>
+      <p>${it.e.desc}</p>
+      <div class="meta"><span>📅 ${period(it.e)}</span>${cdTag(it.e, it.st)}<a class="go" href="${it.e.url}" target="_blank" rel="noopener noreferrer">공식 페이지 ↗</a></div>
+    </div>`;
             });
         }
 
-        /* 하단 목록 */
         function listHtml(arr, st) {
             if (!arr.length) return '<div class="none">해당 이벤트가 없어요.</div>';
-            return arr.map(e =>
-                `<div class="ev" style="--c:${TYPES[e.type].c}"><span class="nm">${e.title}</span>${cdTag(e, st)}</div>`).join('');
+            return arr.map(e => `<div class="ev" style="--c:${TYPES[e.type].c}"><span class="nm"><a href="${e.url}" target="_blank" rel="noopener noreferrer">${e.title} ↗</a></span>${cdTag(e, st)}</div>`).join('');
         }
 
         /* =========================================================
@@ -1198,9 +1299,8 @@
             const now = new Date(),
                 groups = classify(now);
             const newSig = groups.on.map(e => e.id).join() + '|' + groups.soon.map(e => e.id).join();
-            if (newSig === sig) return; // 상태가 안 바뀌었으면 그대로
+            if (newSig === sig) return;
             sig = newSig;
-
             $('slides').innerHTML = buildSlides(now, groups).join('');
             slideEls = [...$('slides').children];
             $('dots').innerHTML = slideEls.map((_, k) => `<i data-i="${k}"></i>`).join('');
@@ -1221,7 +1321,7 @@
 
         function loop(t) {
             const dt = Math.min(t - last, 200);
-            last = t; // 탭이 숨겨졌다 돌아와도 튀지 않게
+            last = t;
             if (!paused) {
                 elapsed += dt;
                 if (elapsed >= INTERVAL) show(cur + 1);
@@ -1241,13 +1341,12 @@
         buildEvents();
         requestAnimationFrame(loop);
         setInterval(tickCountdown, 1000);
-        setInterval(buildEvents, 30000); // 이벤트가 시작/종료되면 자동으로 다시 구성
+        setInterval(buildEvents, 30000);
 
         /* =========================================================
            4) 감도 추천 / 배율별 조정 / 보정
            ========================================================= */
-        /* 800 DPI 기준 시작값 (여기만 고치면 추천값이 바뀝니다) */
-        const GENERAL_BASE = 50; // 일반(3인칭) 감도 시작값
+        const GENERAL_BASE = 50; // 800 DPI 기준 일반(3인칭) 감도 시작값
         const SCOPES = [{
             n: '2배율',
             b: 43
@@ -1270,29 +1369,30 @@
             n: '하이브리드',
             b: 42
         }];
-        let adj = SCOPES.map(() => 0); // 배율별 직접 조정값 (추천값 대비 +/-)
+        let adj = SCOPES.map(() => 0);
         let bases = [],
             vals = [];
         const clamp = v => Math.min(100, Math.max(1, Math.round(v)));
         let recText = '';
 
         $('grid').innerHTML = SCOPES.map((s, i) => `
-    <div class="rc">
-      <small>${s.n}</small>
-      <strong id="rv${i}">0</strong>
-      <em id="df${i}"></em>
-      <input type="range" class="rg" id="rg${i}" data-i="${i}" min="1" max="100">
-      <div class="pm">
-        <button type="button" data-i="${i}" data-d="-1" aria-label="${s.n} 감도 내리기">−</button>
-        <button type="button" data-i="${i}" data-d="1" aria-label="${s.n} 감도 올리기">+</button>
-      </div>
-    </div>`).join('');
+  <div class="rc">
+    <small>${s.n}</small>
+    <strong id="rv${i}">0</strong>
+    <em id="df${i}"></em>
+    <input type="range" class="rg" id="rg${i}" data-i="${i}" min="1" max="100">
+    <div class="pm">
+      <button type="button" data-i="${i}" data-d="-1" aria-label="${s.n} 감도 내리기">−</button>
+      <button type="button" data-i="${i}" data-d="1" aria-label="${s.n} 감도 올리기">+</button>
+    </div>
+  </div>`).join('');
+
         $('calBody').innerHTML = SCOPES.map((s, i) => `
-    <tr><td>${s.n}</td>
-      <td><input type="number" id="cur${i}" min="1" max="100"></td>
-      <td><input type="number" id="mea${i}" min="1" step="0.1" placeholder="측정값"></td>
-      <td><input type="number" id="tar${i}" min="1" placeholder="공통"></td>
-      <td class="res" id="res${i}">-</td></tr>`).join('');
+  <tr><td>${s.n}</td>
+    <td><input type="number" id="cur${i}" min="1" max="100"></td>
+    <td><input type="number" id="mea${i}" min="1" step="0.1" placeholder="측정값"></td>
+    <td><input type="number" id="tar${i}" min="1" placeholder="공통"></td>
+    <td class="res" id="res${i}">-</td></tr>`).join('');
 
         function countTo(el, to) {
             const from = +el.textContent || 0,
@@ -1312,8 +1412,8 @@
             $('edpi').textContent = Math.round(dpi * gen);
 
             SCOPES.forEach((s, i) => {
-                bases[i] = clamp(s.b * (800 / dpi) * f); // 추천값
-                vals[i] = clamp(bases[i] + adj[i]); // 추천값 + 내가 조정한 값
+                bases[i] = clamp(s.b * (800 / dpi) * f);
+                vals[i] = clamp(bases[i] + adj[i]);
                 if (animate) countTo($('rv' + i), vals[i]);
                 else $('rv' + i).textContent = vals[i];
                 $('rg' + i).value = vals[i];
@@ -1322,16 +1422,16 @@
                 $('df' + i).textContent = diff ? `추천 ${bases[i]} → ${diff > 0 ? '+' : ''}${diff}` : '추천 기본값';
                 $('df' + i).classList.toggle('chg', diff !== 0);
 
-                const c = $('cur' + i); // 보정표의 현재 감도도 같이 맞춤
+                const c = $('cur' + i);
                 if (!c.dataset.edited) c.value = vals[i];
             });
 
-            recText = `[SENS.LAB 배그 감도] DPI ${dpi}\n일반: ${gen}\n` +
+            recText = `[PG.GG 배그 감도] DPI ${dpi}\n일반: ${gen}\n` +
                 SCOPES.map((s, i) => `${s.n}: ${vals[i]}`).join('\n') + '\n수직 배율: 1.00';
             renderCal();
+            if (typeof renderWeapon === 'function') renderWeapon(); // 총기 요약·감도표도 같이 갱신
         }
 
-        /* 배율별 직접 조정 (슬라이더 / − + 버튼) */
         function setVal(i, v) {
             adj[i] = clamp(v) - bases[i];
             renderRec(false);
@@ -1372,69 +1472,181 @@
             });
         });
 
-        /* 스크롤 등장 효과 */
-        const io = new IntersectionObserver(es => es.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('show');
-                io.unobserve(e.target);
-            }
-        }), {
-            threshold: 0.12
-        });
-        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
         /* =========================================================
-           5) 부드러운 화면 이동 (easing) + 현재 위치 메뉴 표시
+           5) 총기별 배율 (WEAPONS / CATS만 고치면 목록이 바뀝니다)
+           배율 인덱스: 0=2x 1=3x 2=4x 3=6x 4=8x 5=12x 6=하이브리드
+           총별로 따로 지정하려면: {n:'Mk14 EBR', c:'DMR', scopes:[2,3,4], best:4}
            ========================================================= */
-        const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const easeInOut = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; // 천천히 → 빠르게 → 천천히
-        let scrollAnim = null;
-
-        function smoothTo(y) {
-            cancelAnimationFrame(scrollAnim);
-            const start = window.scrollY,
-                dist = y - start;
-            if (reduceMotion || Math.abs(dist) < 2) {
-                window.scrollTo(0, y);
-                return;
+        const CATS = {
+            AR: {
+                n: '돌격소총',
+                scopes: [0, 1, 2, 3, 6],
+                best: 1
+            },
+            SMG: {
+                n: '기관단총',
+                scopes: [0, 1, 2],
+                best: 0
+            },
+            LMG: {
+                n: '경기관총',
+                scopes: [0, 1, 2, 3],
+                best: 1
+            },
+            DMR: {
+                n: '지정사수소총',
+                scopes: [0, 1, 2, 3, 4],
+                best: 3
+            },
+            SR: {
+                n: '저격소총',
+                scopes: [2, 3, 4, 5],
+                best: 4
+            },
+            SG: {
+                n: '샷건',
+                scopes: [],
+                best: -1
             }
-            const dur = Math.min(1400, 600 + Math.abs(dist) * 0.25); // 멀수록 조금 더 길게
-            const t0 = performance.now();
-            (function step(t) {
-                const p = Math.min((t - t0) / dur, 1);
-                window.scrollTo(0, start + dist * easeInOut(p));
-                if (p < 1) scrollAnim = requestAnimationFrame(step);
-            })(t0);
-        }
+        };
+        const WEAPONS = [
+            ...['M416', 'AKM', 'Beryl M762', 'SCAR-L', 'QBZ95', 'G36C', 'AUG A3', 'Groza', 'M16A4', 'Mk47 Mutant', 'FAMAS', 'K2', 'ACE32'].map(n => ({
+                n,
+                c: 'AR'
+            })),
+            ...['UMP45', 'Vector', 'Tommy Gun', 'Micro UZI', 'PP-19 Bizon', 'MP5K', 'P90', 'JS9'].map(n => ({
+                n,
+                c: 'SMG'
+            })),
+            ...['M249', 'MG3', 'DP-28'].map(n => ({
+                n,
+                c: 'LMG'
+            })),
+            ...['SKS', 'Mini14', 'SLR', 'Mk12', 'QBU', 'VSS', 'Mk14 EBR', 'Dragunov'].map(n => ({
+                n,
+                c: 'DMR'
+            })),
+            ...['Kar98k', 'M24', 'AWM', 'Win94', 'Mosin Nagant'].map(n => ({
+                n,
+                c: 'SR'
+            })),
+            ...['S12K', 'S686', 'S1897', 'DBS'].map(n => ({
+                n,
+                c: 'SG'
+            }))
+        ];
+        let curW = '';
+        const sc = w => w.scopes || CATS[w.c].scopes; // 총별 scopes가 있으면 우선
+        const bestOf = w => (w.best !== undefined ? w.best : CATS[w.c].best);
 
-        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-            const id = a.getAttribute('href');
-            const target = id.length > 1 ? document.querySelector(id) : null;
-            if (id !== '#top' && !target) return;
-            e.preventDefault();
-            const navH = document.querySelector('nav').offsetHeight;
-            const y = id === '#top' ? 0 : target.getBoundingClientRect().top + window.scrollY - navH + 20;
-            smoothTo(y);
-            history.replaceState(null, '', id);
-        }));
+        /* 총기별 배율 감도표 (모든 총의 배율별 감도를 한눈에) */
+        $('wtable').innerHTML = '<thead><tr><th>무기</th>' + SCOPES.map(s => `<th>${s.n}</th>`).join('') + '</tr></thead><tbody>' +
+            Object.keys(CATS).map(k => `<tr class="cat"><td colspan="${SCOPES.length + 1}">${CATS[k].n}</td></tr>` +
+                WEAPONS.filter(w => w.c === k).map(w =>
+                    `<tr class="w" data-w="${w.n}"><td>${w.n}</td>${SCOPES.map((_, i) => `<td class="v" data-i="${i}"></td>`).join('')}</tr>`).join('')
+  ).join('') + '</tbody>';
 
-        /* 사용자가 직접 스크롤하면 자동 이동 중단 */
-        ['wheel', 'touchstart', 'keydown'].forEach(ev =>
-            window.addEventListener(ev, () => cancelAnimationFrame(scrollAnim), {
-                passive: true
-            }));
+function renderWtable() {
+  document.querySelectorAll('#wtable tr.w').forEach(tr => {
+    const w = WEAPONS.find(x => x.n === tr.dataset.w);
+    tr.classList.toggle('on', w.n === curW);
+    tr.querySelectorAll('td.v').forEach(td => {
+      const i = +td.dataset.i, ok = sc(w).includes(i);
+      td.textContent = ok ? vals[i] : '–';
+      td.classList.toggle('x', !ok);
+      td.classList.toggle('best', ok && bestOf(w) === i);
+    });
+  });
+}
+$('wtable').addEventListener('click', e => {
+  const tr = e.target.closest('tr.w');
+  if (tr) { curW = (curW === tr.dataset.w) ? '' : tr.dataset.w; renderWeapon(); }
+});
 
-        /* 지금 보고 있는 섹션을 메뉴에 표시 */
-        const navLinks = [...document.querySelectorAll('nav ul a')];
-        const spy = new IntersectionObserver(es => es.forEach(e => {
-            if (!e.isIntersecting) return;
-            navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
-        }), {
-            rootMargin: '-45% 0px -50% 0px'
-        });
-        document.querySelectorAll('section.s').forEach(s => spy.observe(s));
+$('wsel').innerHTML = '<option value="">전체 보기</option>' +
+  Object.keys(CATS).map(k =>
+    `<optgroup label="${CATS[k].n}">${WEAPONS.filter(w => w.c === k).map(w => `<option value="${w.n}">${w.n}</option>`).join('')}</optgroup>`).join('');
 
-        renderRec();
+$('wcats').innerHTML = Object.keys(CATS).map(k => `
+  <div class="wcat"><h4>${CATS[k].n}</h4><div class="wlist">
+    ${WEAPONS.filter(w => w.c === k).map(w => `<button type="button" class="wchip" data-w="${w.n}">${w.n}</button>`).join('')}
+  </div></div>`).join('');
+
+function renderWeapon() {
+  const w = WEAPONS.find(x => x.n === curW);
+  document.querySelectorAll('.wchip').forEach(b => b.classList.toggle('on', b.dataset.w === curW));
+  $('wsel').value = curW;
+  renderWtable();
+
+  SCOPES.forEach((s, i) => {
+    const card = $('rg' + i).closest('.rc');
+    const ok = !w || sc(w).includes(i);
+    card.classList.toggle('dim', !ok);
+    card.classList.toggle('best', !!w && bestOf(w) === i);
+  });
+
+  if (!w) { $('wsum').innerHTML = '무기를 고르면 장착 가능한 배율이 위쪽 <b>추천 카드</b>에서 강조돼요.'; return; }
+  const c = CATS[w.c];
+  if (!sc(w).length) { $('wsum').innerHTML = `<b>${w.n}</b> (${c.n}) — 근거리 무기라 기본 조준(1배)을 주로 써요.`; return; }
+  $('wsum').innerHTML = `<b>${w.n}</b> (${c.n})<br>사용 가능 배율: ` +
+    sc(w).map(i => `${SCOPES[i].n} <b>${vals[i]}</b>`).join(' · ') +
+    `<br>추천 배율: <b>${SCOPES[bestOf(w)].n}</b> (감도 ${vals[bestOf(w)]})`;
+}
+
+$('wsel').addEventListener('change', e => { curW = e.target.value; renderWeapon(); });
+$('wcats').addEventListener('click', e => {
+  const b = e.target.closest('.wchip');
+  if (b) { curW = (curW === b.dataset.w) ? '' : b.dataset.w; renderWeapon(); }
+});
+
+/* 스크롤 등장 효과 */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+}), {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* =========================================================
+   6) 부드러운 화면 이동 (easing) + 현재 위치 메뉴 표시
+   ========================================================= */
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const easeInOut = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+let scrollAnim = null;
+
+function smoothTo(y) {
+  cancelAnimationFrame(scrollAnim);
+  const start = window.scrollY, dist = y - start;
+  if (reduceMotion || Math.abs(dist) < 2) { window.scrollTo(0, y); return; }
+  const dur = Math.min(1400, 600 + Math.abs(dist) * 0.25), t0 = performance.now();
+  (function step(t) {
+    const p = Math.min((t - t0) / dur, 1);
+    window.scrollTo(0, start + dist * easeInOut(p));
+    if (p < 1) scrollAnim = requestAnimationFrame(step);
+  })(t0);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+  const id = a.getAttribute('href');
+  const target = id.length > 1 ? document.querySelector(id) : null;
+  if (id !== '#top' && !target) return;
+  e.preventDefault();
+  const navH = document.querySelector('nav').offsetHeight;
+  const y = id === '#top' ? 0 : target.getBoundingClientRect().top + window.scrollY - navH + 20;
+  smoothTo(y);
+  history.replaceState(null, '', id);
+}));
+
+['wheel', 'touchstart', 'keydown'].forEach(ev =>
+  window.addEventListener(ev, () => cancelAnimationFrame(scrollAnim), {passive: true}));
+
+const navLinks = [...document.querySelectorAll('nav ul a')];
+const spy = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+}), {rootMargin: '-45% 0px -50% 0px'});
+document.querySelectorAll('section.s').forEach(s => spy.observe(s));
+
+renderRec();
     </script>
 </body>
+
 </html>
